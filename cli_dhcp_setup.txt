@@ -1,0 +1,16 @@
+#enable
+#configure terminal
+#host R0
+#interface FastEthernet 0/0
+#ip address 192.168.1.1 255.255.255.0
+#no shutdown
+#exit
+#ip DHCP pool ip0
+#net 192.168.1.0 255.255.255.0
+#default-router 192.168.1.1
+#exit
+#ip dhcp excluded-address 192.168.1.1 192.168.1.99
+#exit
+#copy run startup-config
+RETURN
+#show running-config
