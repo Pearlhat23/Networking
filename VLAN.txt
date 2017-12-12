@@ -1,0 +1,23 @@
+Router:
+1. Port on FastEthernet 0/0
+2. ip 192.168.1.1 255.255.255.0
+PACKETS SHOULD FAIL BETWEEN OUTSIDE NODES, AND SWITCH TO ROUTER
+
+SWITCH:
+1. Make VLAN: #100 Name: LAB
+2. FastEthernet 0/5 - TRUNK
+3. FastEthernet 0/3 - VLAN > 100 LAB
+4. FastEthernet 0/4 - VLAN > 100 LAB
+
+Router:
+1. VLAN DATABASE
+2. Add VLAN 100 LAB
+CLI:
+3. exit
+4. configure terminal
+5. interface FastEthernet 0/0.1
+6. encapsulation dot1Q 100
+7. ip address 192.168.100.1 255.255.255.0
+8. exit
+9. exit
+10. RETURN
